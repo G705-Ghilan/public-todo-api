@@ -37,4 +37,5 @@ fastapi dev
 ├── env.development # debug only env values
 ├── main.py
 ├── readme.md
-└── requirements.txt```
+└── requirements.txt
+```
