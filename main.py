@@ -1,14 +1,10 @@
 from contextlib import asynccontextmanager
-from fastapi import APIRouter, FastAPI, HTTPException, status
-from pydantic import BaseModel, ConfigDict, Field, model_serializer
 
+from fastapi import FastAPI
 
 from app.core.config import get_settings
-from app.core.functions import safe_object_id
-from app.core.types import OutputBaseModel, PyObjectId
-from app.db.mongodb import MongoDB, MongoDBDep
+from app.db.mongodb import MongoDB
 from app.routes.v1.v1_router import v1_router
-from app.routes.v1.todos import todos_router
 
 
 @asynccontextmanager
@@ -27,3 +23,4 @@ app = FastAPI(lifespan=app_lifespan)
 
 # Include V1 routes
 app.include_router(router=v1_router, prefix="/api/v1")
+# app.include_router(router=v2_router, prefix="/api/v2")

@@ -1,8 +1,8 @@
 from datetime import datetime, timezone
 
 from app.db.mongodb import MongoDBDep
-from app.routes.v1.todos.schema import TodoInput, TodoItem
 from app.routes.v1.todos.router import todos_router
+from app.routes.v1.todos.schema import TodoInput, TodoItem
 
 
 @todos_router.post('/todos', response_model=TodoItem, response_model_exclude_none=True)

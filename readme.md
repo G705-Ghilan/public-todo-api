@@ -33,7 +33,7 @@ fastapi dev
 │           │   ├── router.py
 │           │   └── schema.py
 │           └── v1_router.py # all endpoints included in one v1_router value
-            # other endpoints with the same todos structure
+│           # other endpoints with the same todos structure
 ├── env.development # debug only env values
 ├── main.py
 ├── readme.md
